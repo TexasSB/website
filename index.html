@@ -4,7 +4,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Texas Science Bowl</title>
-    <meta name="description" content="Texas Science Bowl — a competition like some others..." />
+    <meta
+      name="description"
+      content="Texas Science Bowl is a high school invitational science bowl tournament based in Texas, featuring teams nationwide. View recaps, results, and updates."
+    />
+
+    <link rel="canonical" href="https://texassciencebowl.org/" />
+
+    <meta property="og:site_name" content="Texas Science Bowl" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Texas Science Bowl" />
+    <meta
+      property="og:description"
+      content="A high school invitational science bowl tournament based in Texas. View recaps, results, and updates."
+    />
+    <meta property="og:url" content="https://texassciencebowl.org/" />
+    <meta property="og:image" content="https://texassciencebowl.org/logo.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Texas Science Bowl" />
+    <meta
+      name="twitter:description"
+      content="A high school invitational science bowl tournament based in Texas. View recaps, results, and updates."
+    />
+    <meta name="twitter:image" content="https://texassciencebowl.org/logo.png" />
 
     <link rel="icon" href="./favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
@@ -14,13 +37,39 @@
 
     <link rel="stylesheet" href="./styles.css" />
     <script src="./script.js" defer></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Texas Science Bowl",
+        "url": "https://texassciencebowl.org/"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Texas Science Bowl",
+        "url": "https://texassciencebowl.org/",
+        "logo": "https://texassciencebowl.org/logo.png",
+        "sameAs": ["https://www.instagram.com/texas_scibowl/", "https://discord.com/invite/VQwKMMud2x"],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "texassciencebowl@gmail.com"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <header class="site-header">
       <div class="container">
         <nav class="nav" aria-label="Primary navigation">
           <a class="brand" href="./index.html" aria-label="Texas Science Bowl home">
-            <img src="./logo.png" alt="" />
+            <img src="./logo.png" alt="Texas Science Bowl logo" />
             <span>Texas Science Bowl</span>
           </a>
 
@@ -70,10 +119,46 @@
       <div class="container">
         <section class="hero hero--center">
           <h1>TEXAS SCIENCE BOWL</h1>
-          <p class="tagline-only"><em>a competition like some others...</em></p>
+          <p class="tagline-only">
+            <em>The largest university-hosted science bowl invitational</em>
+          </p>
 
           <div class="cta-row">
             <a class="button primary" href="./competitions/2026/recap.html">Most recent competition: 2026</a>
+          </div>
+        </section>
+
+        <section class="grid" aria-label="About Texas Science Bowl">
+          <div class="card">
+            <h3>What is Texas Science Bowl?</h3>
+            <p>
+              Texas Science Bowl is a science bowl invitational tournament geared towards HS students, run by students at the University 
+              of Texas at Austin. Since 2025, we have hosted a virtual high-stakes tournament featuring some of the most elite 
+              teams in the US.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Past competitions & results</h3>
+            <p>
+              Browse our most recent recap, or explore previous tournaments for impact, winners, and links to brackets and
+              player statistics.
+              <br />
+              <a href="./competitions/2026/recap.html">2026 recap</a> · <a href="./competitions/2025/recap.html">2025 recap</a>
+            </p>
+          </div>
+          <div class="card">
+            <h3>Looking for resources?</h3>
+            <p>
+              Packet releases are posted in the Past Competitions menu when available. For questions, reach out on our <a href="./contact.html">contact page</a>.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Stay connected</h3>
+            <p>
+              Follow along for announcements and updates via our
+              <a href="https://www.instagram.com/texas_scibowl/" target="_blank" rel="noreferrer">Instagram</a> and
+              <a href="https://discord.com/invite/VQwKMMud2x" target="_blank" rel="noreferrer">Discord</a>.
+            </p>
           </div>
         </section>
       </div>
@@ -81,7 +166,7 @@
 
     <footer>
       <div class="container">
-        <div>© 2026 Texas Science Bowl</div>
+        <div>Texas Science Bowl, since 2025</div>
       </div>
     </footer>
   </body>
