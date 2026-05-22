@@ -27,7 +27,7 @@
     <link rel="manifest" href="../../favicon/site.webmanifest" />
 
     <link rel="stylesheet" href="../../styles.css" />
-    <script src="../../script.js" defer></script>
+    <script src="../../script.js?v=2" defer></script>
 
     <script type="application/ld+json">
       {
@@ -63,38 +63,33 @@
 
             <div class="dropdown" data-dropdown data-open="false">
               <button class="nav-button" type="button" aria-haspopup="true" aria-expanded="false">
-                Past Competitions <span class="caret" aria-hidden="true"></span>
+                Invitationals <span class="caret" aria-hidden="true"></span>
               </button>
-              <div class="dropdown-panel" role="menu" aria-label="Past Competitions">
+              <div class="dropdown-panel" role="menu" aria-label="Invitationals">
                 <div class="group">
-                  <h4>2025</h4>
-                  <a class="dropdown-item" href="../../competitions/2025/recap.html" role="menuitem">
-                    <span>Recap</span>
-                    <span class="pill">You are here</span>
-                  </a>
-                  <a
-                    class="dropdown-item"
-                    href="https://drive.google.com/drive/folders/1dOEqQJPtWBgRzAYo-7Cz28gFCe_LZolo"
-                    role="menuitem"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <span>Packets</span>
+                  <a class="dropdown-item is-disabled" aria-disabled="true" tabindex="-1">
+                    <span>Upcoming</span>
+                    <span class="pill tba">TBA</span>
                   </a>
                 </div>
                 <div class="group">
-                  <h4>2026</h4>
-                  <a class="dropdown-item" href="../../competitions/2026/recap.html" role="menuitem">
-                    <span>Recap</span>
-                  </a>
-                  <a
-                    class="dropdown-item"
-                    href="https://drive.google.com/drive/folders/17VxXpvTxq3oc1gRhK7VGPE0GZeBorhze?usp=sharing"
-                    role="menuitem"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <span>Packets</span>
+                  <div class="submenu-trigger dropdown-item" role="menuitem" aria-haspopup="true">
+                    <span>Past Results</span>
+                    <span class="caret-right" aria-hidden="true"></span>
+                    <div class="submenu-panel" role="menu" aria-label="Past Results">
+                      <a class="dropdown-item" href="../../competitions/2026/recap.html" role="menuitem">
+                        <span>2026</span>
+                      </a>
+                      <a class="dropdown-item" href="../../competitions/2025/recap.html" role="menuitem">
+                        <span>2025</span>
+                        <span class="pill">You are here</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="group">
+                  <a class="dropdown-item" href="../../resources.html" role="menuitem">
+                    <span>Resources</span>
                   </a>
                 </div>
               </div>
@@ -197,6 +192,37 @@
         <div>Texas Science Bowl, since 2025</div>
       </div>
     </footer>
+    <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true" aria-label="Site navigation">
+      <div class="mno-inner" id="mnoInner">
+        <div class="mno-panel">
+          <div class="mno-header">
+            <a class="mno-brand" href="../../index.html">Texas Science Bowl</a>
+            <button class="mno-close" id="mnoClose" aria-label="Close menu"><span class="mno-x"></span></button>
+          </div>
+          <nav class="mno-list">
+            <a class="mno-item" href="../../index.html">Home</a>
+            <div class="mno-divider"></div>
+            <span class="mno-section-label">Invitationals</span>
+            <span class="mno-item mno-item--disabled" aria-disabled="true">Upcoming <span class="pill tba">TBA</span></span>
+            <button class="mno-item" id="mnoGoPastResults">Past Results <span class="caret-right"></span></button>
+            <a class="mno-item" href="../../resources.html">Resources</a>
+            <div class="mno-divider"></div>
+            <a class="mno-item" href="../../contact.html">Contact Us</a>
+          </nav>
+        </div>
+        <div class="mno-panel">
+          <div class="mno-header">
+            <button class="mno-back" id="mnoBack" aria-label="Back"><span class="caret-left"></span> Back</button>
+            <span class="mno-header-title">Past Results</span>
+            <button class="mno-close" id="mnoClose2" aria-label="Close menu"><span class="mno-x"></span></button>
+          </div>
+          <nav class="mno-list">
+            <a class="mno-item" href="../../competitions/2026/recap.html">2026</a>
+            <a class="mno-item" href="../../competitions/2025/recap.html">2025</a>
+          </nav>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
 

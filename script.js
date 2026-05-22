@@ -45,20 +45,46 @@
   });
 
   const navToggle = document.querySelector(".nav-toggle");
-  if (navToggle) {
-    const nav = navToggle.closest(".nav");
-    navToggle.addEventListener("click", () => {
-      const isOpen = nav.dataset.mobileOpen === "true";
-      nav.dataset.mobileOpen = isOpen ? "false" : "true";
-      navToggle.setAttribute("aria-expanded", isOpen ? "false" : "true");
-    });
-    document.addEventListener("click", (e) => {
-      if (!(e.target instanceof Element)) return;
-      if (!nav.contains(e.target)) {
-        nav.dataset.mobileOpen = "false";
-        navToggle.setAttribute("aria-expanded", "false");
-      }
-    });
+
+  function getOverlay() { return document.getElementById("mobileOverlay"); }
+  function getInner()   { return document.getElementById("mnoInner"); }
+
+  function openOverlay() {
+    const ov = getOverlay();
+    if (!ov) return;
+    ov.classList.add("is-open");
+    ov.setAttribute("aria-hidden", "false");
+    document.body.classList.add("overlay-open");
+    navToggle?.setAttribute("aria-expanded", "true");
   }
+
+  function closeOverlay() {
+    const ov = getOverlay();
+    if (!ov) return;
+    ov.classList.remove("is-open");
+    getInner()?.classList.remove("at-sub");
+    ov.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("overlay-open");
+    navToggle?.setAttribute("aria-expanded", "false");
+  }
+
+  navToggle?.addEventListener("click", openOverlay);
+
+  document.addEventListener("click", (e) => {
+    if (!(e.target instanceof Element)) return;
+    const t = e.target;
+    if (t.id === "mnoClose" || t.closest("#mnoClose"))   { closeOverlay(); return; }
+    if (t.id === "mnoClose2" || t.closest("#mnoClose2")) { closeOverlay(); return; }
+    if (t.id === "mnoGoPastResults" || t.closest("#mnoGoPastResults")) {
+      getInner()?.classList.add("at-sub"); return;
+    }
+    if (t.id === "mnoBack" || t.closest("#mnoBack")) {
+      getInner()?.classList.remove("at-sub"); return;
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeOverlay();
+  });
 })();
 
