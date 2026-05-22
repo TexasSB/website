@@ -43,5 +43,22 @@
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeAll();
   });
+
+  const navToggle = document.querySelector(".nav-toggle");
+  if (navToggle) {
+    const nav = navToggle.closest(".nav");
+    navToggle.addEventListener("click", () => {
+      const isOpen = nav.dataset.mobileOpen === "true";
+      nav.dataset.mobileOpen = isOpen ? "false" : "true";
+      navToggle.setAttribute("aria-expanded", isOpen ? "false" : "true");
+    });
+    document.addEventListener("click", (e) => {
+      if (!(e.target instanceof Element)) return;
+      if (!nav.contains(e.target)) {
+        nav.dataset.mobileOpen = "false";
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
 })();
 
