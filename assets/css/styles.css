@@ -603,21 +603,25 @@ body.overlay-open {
 
 .mno-inner {
   display: flex;
-  width: 200%;
+  width: 300%;
   height: 100%;
   transition: transform 0.22s ease;
 }
 
 .mno-panel {
-  width: 50%;
+  width: 33.3333%;
   height: 100%;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
 }
 
-.mno-inner.at-sub {
-  transform: translateX(-50%);
+.mno-inner.at-sub-invi {
+  transform: translateX(-33.3333%);
+}
+
+.mno-inner.at-sub-past {
+  transform: translateX(-66.6666%);
 }
 
 .mno-header {

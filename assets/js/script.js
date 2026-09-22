@@ -62,7 +62,7 @@
     const ov = getOverlay();
     if (!ov) return;
     ov.classList.remove("is-open");
-    getInner()?.classList.remove("at-sub");
+    getInner()?.classList.remove("at-sub-invi", "at-sub-past");
     ov.setAttribute("aria-hidden", "true");
     document.body.classList.remove("overlay-open");
     navToggle?.setAttribute("aria-expanded", "false");
@@ -75,11 +75,15 @@
     const t = e.target;
     if (t.id === "mnoClose" || t.closest("#mnoClose"))   { closeOverlay(); return; }
     if (t.id === "mnoClose2" || t.closest("#mnoClose2")) { closeOverlay(); return; }
+    if (t.id === "mnoClose3" || t.closest("#mnoClose3")) { closeOverlay(); return; }
+    if (t.id === "mnoGoInvi" || t.closest("#mnoGoInvi")) {
+      getInner()?.classList.add("at-sub-invi"); return;
+    }
     if (t.id === "mnoGoPastResults" || t.closest("#mnoGoPastResults")) {
-      getInner()?.classList.add("at-sub"); return;
+      getInner()?.classList.add("at-sub-past"); return;
     }
     if (t.id === "mnoBack" || t.closest("#mnoBack")) {
-      getInner()?.classList.remove("at-sub"); return;
+      getInner()?.classList.remove("at-sub-invi", "at-sub-past"); return;
     }
   });
 
