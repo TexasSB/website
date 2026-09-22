@@ -27,7 +27,6 @@
     <link rel="manifest" href="../assets/favicon/site.webmanifest" />
 
     <link rel="stylesheet" href="../assets/css/styles.css" />
-    <script src="../assets/js/script.js?v=3" defer></script>
 
     <script type="application/ld+json">
       {
@@ -44,132 +43,45 @@
     </script>
   </head>
   <body>
-    <header class="site-header">
-      <div class="container">
-        <nav class="nav" aria-label="Primary navigation">
-          <a class="brand" href="/" aria-label="Texas Science Bowl home">
-            <img src="../assets/logo.png" alt="Texas Science Bowl logo" />
-            <span>Texas Science Bowl</span>
-          </a>
-
-          <div class="nav-links">
-            <a class="nav-link" href="/">Home</a>
-
-            <div class="dropdown" data-dropdown data-open="false">
-              <button class="nav-button" type="button" aria-haspopup="true" aria-expanded="false">
-                Invitationals <span class="caret" aria-hidden="true"></span>
-              </button>
-              <div class="dropdown-panel" role="menu" aria-label="Invitationals">
-                <div class="group">
-                  <div class="submenu-trigger dropdown-item" role="menuitem" aria-haspopup="true">
-                    <span>2027 Invitational</span>
-                    <span class="caret-right" aria-hidden="true"></span>
-                    <div class="submenu-panel" role="menu" aria-label="2027 Invitational">
-                      <a class="dropdown-item is-disabled" aria-disabled="true" tabindex="-1">
-                        <span>Bracket</span>
-                        <span class="pill tba">TBA</span>
-                      </a>
-                      <a class="dropdown-item is-disabled" aria-disabled="true" tabindex="-1">
-                        <span>Recap</span>
-                        <span class="pill tba">TBA</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="group">
-                  <div class="submenu-trigger dropdown-item" role="menuitem" aria-haspopup="true">
-                    <span>Past Results</span>
-                    <span class="caret-right" aria-hidden="true"></span>
-                    <div class="submenu-panel" role="menu" aria-label="Past Results">
-                      <a class="dropdown-item" href="../invitationals/2026/" role="menuitem">
-                        <span>2026</span>
-                      </a>
-                      <a class="dropdown-item" href="../invitationals/2025/" role="menuitem">
-                        <span>2025</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="group">
-                  <a class="dropdown-item" href="../resources/" role="menuitem">
-                    <span>Resources</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <a class="nav-link" href="../contact/" aria-current="page">Contact Us</a>
-          </div>
-          <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
-            <span class="hamburger-bar"></span>
-            <span class="hamburger-bar"></span>
-            <span class="hamburger-bar"></span>
-          </button>
+    <header class="bar">
+      <div class="wrap">
+        <a class="brand" href="../"><img src="../assets/logo.png" alt="" /><span>Texas Science Bowl</span></a>
+        <nav class="nav" aria-label="Primary">
+          <a href="../#tournaments">Tournaments</a>
+          <a href="../resources/">Packets</a>
+          <a href="../contact/" aria-current="page">Contact</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <div class="container">
-        <p class="breadcrumbs"><a href="/">Home</a> / Contact Us</p>
-        <h1 class="page-title">Contact Us</h1>
-        <div class="content">
-          <ul>
-            <li><strong>Email:</strong> <a href="mailto:texassciencebowl@gmail.com">texassciencebowl@gmail.com</a></li>
-            <li><strong>Discord server:</strong> <a href="https://discord.com/invite/VQwKMMud2x" target="_blank" rel="noreferrer">Join here</a></li>
-            <li><strong>Insta:</strong> <a href="https://www.instagram.com/texas_scibowl/" target="_blank" rel="noreferrer">@texas_scibowl</a></li>
-          </ul>
-        </div>
-      </div>
+      <section class="wrap titleband">
+        <p class="crumbs"><a href="../">Home</a> / Contact</p>
+        <h1>Contact</h1>
+        <p class="subtitle">Questions about competing, moderating or writing</p>
+      </section>
+
+      <section class="wrap link-cards">
+        <a class="link-card" href="mailto:texassciencebowl@gmail.com">
+          <span class="k">Email</span>
+          <span class="v">texassciencebowl@gmail.com</span>
+          <span class="go">Send an email →</span>
+        </a>
+        <a class="link-card" href="https://discord.com/invite/VQwKMMud2x" target="_blank" rel="noreferrer">
+          <span class="k">Discord</span>
+          <span class="v">TSB server</span>
+          <span class="go">Join the server ↗</span>
+        </a>
+        <a class="link-card" href="https://www.instagram.com/texas_scibowl/" target="_blank" rel="noreferrer">
+          <span class="k">Instagram</span>
+          <span class="v">@texas_scibowl</span>
+          <span class="go">Follow ↗</span>
+        </a>
+      </section>
     </main>
 
     <footer>
-      <div class="container">
-        <div>Texas Science Bowl, since 2025</div>
-      </div>
+      <div class="wrap">Texas Science Bowl, since 2025</div>
     </footer>
-    <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true" aria-label="Site navigation">
-      <div class="mno-inner" id="mnoInner">
-        <div class="mno-panel">
-          <div class="mno-header">
-            <a class="mno-brand" href="/">Texas Science Bowl</a>
-            <button class="mno-close" id="mnoClose" aria-label="Close menu"><span class="mno-x"></span></button>
-          </div>
-          <nav class="mno-list">
-            <a class="mno-item" href="/">Home</a>
-            <div class="mno-divider"></div>
-            <span class="mno-section-label">Invitationals</span>
-            <button class="mno-item" id="mnoGoInvi">2027 Invitational <span class="caret-right"></span></button>
-            <button class="mno-item" id="mnoGoPastResults">Past Results <span class="caret-right"></span></button>
-            <a class="mno-item" href="../resources/">Resources</a>
-            <div class="mno-divider"></div>
-            <a class="mno-item" href="../contact/">Contact Us</a>
-          </nav>
-        </div>
-        <div class="mno-panel">
-          <div class="mno-header">
-            <button class="mno-back" id="mnoBack" aria-label="Back"><span class="caret-left"></span> Back</button>
-            <span class="mno-header-title">2027 Invitational</span>
-            <button class="mno-close" id="mnoClose2" aria-label="Close menu"><span class="mno-x"></span></button>
-          </div>
-          <nav class="mno-list">
-            <span class="mno-item mno-item--disabled" aria-disabled="true">Bracket <span class="pill tba">TBA</span></span>
-            <span class="mno-item mno-item--disabled" aria-disabled="true">Recap <span class="pill tba">TBA</span></span>
-          </nav>
-        </div>
-        <div class="mno-panel">
-          <div class="mno-header">
-            <button class="mno-back" id="mnoBack" aria-label="Back"><span class="caret-left"></span> Back</button>
-            <span class="mno-header-title">Past Results</span>
-            <button class="mno-close" id="mnoClose3" aria-label="Close menu"><span class="mno-x"></span></button>
-          </div>
-          <nav class="mno-list">
-            <a class="mno-item" href="../invitationals/2026/">2026</a>
-            <a class="mno-item" href="../invitationals/2025/">2025</a>
-          </nav>
-        </div>
-      </div>
-    </div>
   </body>
 </html>
-
